@@ -5,35 +5,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/fondo"
     tools:context=".DetallePelicula">
-    <LinearLayout
+
+    <ImageView
+        android:id="@+id/iv_img_pelicula"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_gravity="center"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bonesheader"/>
 
-        <ImageView
-            android:id="@+id/iv_pelicula_imagen"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/bones"/>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
 
         <TextView
             android:id="@+id/tv_nombre_pelicula"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="0.3"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="25sp"
-            android:gravity="center"/>
+            android:textColor="@color/fondoBoton"
+            android:text="Bones"
+            android:layout_marginLeft="15dp"
+            android:textSize="25sp"/>
 
-        <TextView
-            android:id="@+id/tv_pelicula_desc"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textSize="14sp"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="2.5dp"
+            android:layout_gravity="center"
+            android:layout_marginRight="10dp"
+            android:background="@color/fondoBoton"/>
 
     </LinearLayout>
 
-
+    <TextView
+        android:id="@+id/tv_pelicula_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="Descripcion"
+        android:textColor="@color/letra"
+        android:layout_marginTop="20dp"
+        android:textSize="15sp"
+        />
 </LinearLayout>

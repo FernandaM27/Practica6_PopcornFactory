@@ -12,7 +12,7 @@ class DetallePelicula : AppCompatActivity() {
         val bundle = intent.extras
 
         if(bundle != null){
-            iv_pelicula_imagen.setImageResource(bundle.getInt("header"))
+            iv_img_pelicula.setImageResource(bundle.getInt("header"))
             tv_nombre_pelicula.setText(bundle.getString("nombre"))
             tv_pelicula_desc.setText(bundle.getString("sinopsis"))
         }
