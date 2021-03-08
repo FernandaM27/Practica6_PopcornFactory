@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_detalle_pelicula.view.*
 import kotlinx.android.synthetic.main.activity_menu_pop_corn_factory.*
 import kotlinx.android.synthetic.main.pelicula.view.*
 
-class MainActivity : AppCompatActivity() {
+class MenuPopCornFactory : AppCompatActivity() {
 
     var adapter: PeliculaAdapter? = null
     var peliculas = ArrayList<Pelicula>()
@@ -31,7 +31,7 @@ class MainActivity : AppCompatActivity() {
 
         cargarSeries()
         adapterS = PeliculaAdapter(this, series)
-        grindView.adapter = adapterS
+        grindViewSeries.adapter = adapterS
 
     }
 
@@ -82,7 +82,7 @@ class PeliculaAdapter: BaseAdapter{
         var inflator = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         var vista = inflator.inflate(R.layout.pelicula, null)
         vista.iv_pelicula.setImageResource(pelicula.image)
-        vista.tv_nombre_pelicula.setText(pelicula.titulo)
+        vista.tv_pelicula.setText(pelicula.titulo)
 
         vista.iv_pelicula.setOnClickListener(){
             var intent = Intent(context, DetallePelicula::class.java)
@@ -91,6 +91,7 @@ class PeliculaAdapter: BaseAdapter{
             intent.putExtra("header", pelicula.header)
             intent.putExtra("sinopsis", pelicula.sinopsis)
 
+            context!!.startActivity(intent)
         }
 
         return vista;
