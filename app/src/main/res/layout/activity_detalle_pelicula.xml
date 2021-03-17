@@ -61,7 +61,7 @@
         android:background="@drawable/boton_redondo"
         android:textColor="@color/black"
         android:paddingHorizontal="25dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="15dp"
         android:text="Buy my ticket!" />
 
     <TextView

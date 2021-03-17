@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/fondoBoton"
-            android:text="Reservation details  "
+            android:text="Reservation  "
             android:layout_marginLeft="15dp"
             android:textSize="25sp"/>
 
@@ -31,12 +31,23 @@
     </LinearLayout>
 
     <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Details"
+        android:textColor="@color/fondoBoton"
+        android:textSize="25sp"
+        android:layout_marginTop="235dp"
+        />
+
+    <TextView
         android:id="@+id/titleTexV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:text="Movie: "
-        android:textColor="@color/fondoBoton"
+        android:textColor="@color/letra"
         android:textSize="20sp"
         android:layout_marginTop="50dp"
         />
@@ -48,7 +59,7 @@
         android:layout_marginTop="50dp"
         android:text="Seat: "
         android:textAlignment="center"
-        android:textColor="@color/fondoBoton"
+        android:textColor="@color/letra"
         android:textSize="20sp" />
 
 </LinearLayout>
